@@ -10,10 +10,10 @@ const by = webdriver.By;
 const By = webdriver.By;
 let allLinks = [];
 let customersLinks = [];
-let globalIndex = 1;
+let globalIndex = 0;
 let customersEmails = [];
 
-const xpathSearchInput = '//*[@id="tsf"]/div[2]/div/div[1]/div/div[1]/input';
+const xpathSearchInput = '//*[@id="tsf"]/div[2]/div[1]/div[1]/div/div[2]/input';
 const xpathSearchButton = '//*[@id="tsf"]/div[2]/div/div[3]/center/input[1]';
 
 
@@ -26,9 +26,9 @@ const browser = new webdriver
 
 browser.manage().window().setSize(1024, 700);
 
-// getPage();
-// readFileAsync('links-granit.txt');
-finEmailsInLink();
+getPage();
+// readFileAsync('links.txt');
+// finEmailsInLink();
 
 async function getPage() {
   //логинимся
@@ -150,10 +150,10 @@ async function manageEmails() {
 }
 
 async function managePageLinks() {
-  writeFileAsync(allLinks, 'links-granit.txt');
+  writeFileAsync(allLinks, 'links.txt');
   if (globalIndex < 7) {
     globalIndex++;
-    readFileAsync('links-granit.txt');
+    readFileAsync('links.txt');
   }
 }
 

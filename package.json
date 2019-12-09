@@ -6,7 +6,7 @@
   "dependencies": {
     "babel-core": "*",
     "babel-polyfill": "^6.26.0",
-    "chromedriver": "*",
+    "chromedriver": "^78.0.1",
     "fs": "0.0.1-security",
     "log4js": "",
     "phantomjs": "*",
